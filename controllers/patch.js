@@ -1,10 +1,9 @@
 var jsonpatch = require('jsonpatch');
-//var jsonpatch = require('fast-json-patch')
 
 class JsonPatch{
     patchDoc(req, res, next){
-        var document = JSON.parse(req.body.document);
-        var patch = JSON.parse(req.body.patch);
+        var document = typeof(req.body.document)=="string" ? JSON.parse(req.body.document) : req.body.document;
+        var patch = typeof(req.body.patch)=="string" ? JSON.parse(req.body.patch) : req.body.patch;
         document = jsonpatch.apply_patch(document, patch);
         res.json(document);
     }
