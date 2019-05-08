@@ -7,7 +7,7 @@ class LoginController{
             password: req.body.password
         };
         authService.generateToken(data).then(token=>{
-            res.json(token);
+            res.json({user:data.username, token: token});
         }).catch(err=>{
             res.json(err);
         });
