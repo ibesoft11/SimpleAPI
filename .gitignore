@@ -1,2 +1,4 @@
 /node_modules
 /thumbnails
+.env
+yarn.lock
