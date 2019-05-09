@@ -1,6 +1,6 @@
 # Simple API
 
-An API server for built with NodeJs to demonstrate jwt, json patching and thumbnail generation.
+An API server built with Node to demonstrate jwt, json patching and thumbnail generation.
 
 ## Getting Started
 
