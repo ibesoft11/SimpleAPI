@@ -17,6 +17,8 @@ class Thumbnail{
           }
         thumb(options, function(files, err, stdout, stderr) {
             res.sendFile(dir + `/${filename+options.suffix+ext}`);
+          }).catch(err=>{
+              res.json('invalid input, try again');
           });
     }
 }
